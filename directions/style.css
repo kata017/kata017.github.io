@@ -1,0 +1,36 @@
+main
+{
+  border: 5px solid #4285f4;
+  color: white;
+  width: 200px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p
+{
+  padding: 20px;
+  margin: 0;
+}
+
+.north
+{
+  background: #E67676;
+}
+
+.east
+{
+  background: #F2F062;
+}
+
+.south
+{
+  background: #A9E6E6;
+}
+
+.west
+{
+  background: #7692E4;
+}

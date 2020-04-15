@@ -1,0 +1,63 @@
+body
+{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header
+{
+  background: aqua;
+  width: 80%;
+  height: 50px;
+}
+
+.content
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: 300px;
+}
+
+.left_menu
+{
+  background: orange;
+  width: 150px;
+  height: 100%;
+}
+
+.main_content
+{
+  background: red;
+  position: relative;
+  width: 800px;
+  height: 100%;
+}
+
+.right_menu
+{
+  background: purple;
+  width: 150px;
+  height: 100%;
+}
+
+.square
+{
+  display: block;
+  background: black;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+footer
+{
+  background: blue;
+  width: 80%;
+  height: 50px;
+}

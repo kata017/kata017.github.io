@@ -1,0 +1,19 @@
+main
+{
+  width: 500px;
+  color: black;
+}
+h1
+{
+  color: #008080;
+}
+
+h2
+{
+  color: #198c8c;
+}
+
+ol 
+{
+  list-style-type: upper-roman;
+}

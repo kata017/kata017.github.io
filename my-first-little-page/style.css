@@ -1,0 +1,36 @@
+main
+{
+  font-family: 'Sen', sans-serif;
+}
+
+div
+{
+  display: flex;
+}
+
+section
+{
+  width: 200px;
+  text-align: center;
+}
+
+img
+{
+  width: 150px;
+}
+
+img:hover
+{
+  width: 180px;
+}
+
+a
+{
+  display:block;
+  color: blue;
+}
+
+a:hover
+{
+  color: purple;
+}

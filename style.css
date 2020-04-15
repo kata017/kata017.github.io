@@ -1,0 +1,161 @@
+body
+{
+  background: white;
+  color: #222;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding:0;
+  margin:0;
+}
+
+header
+{
+  align-items: center;
+  background: black;
+  display: flex;
+  width: 1200px;
+  height: 70px;
+}
+
+header a
+{
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 30px;
+  margin: 10px;
+  text-decoration:none;
+}
+
+.first
+{
+  margin-left: 100px;
+}
+
+section
+{
+  display: flex;
+  width: 1200px;
+}
+
+aside
+{
+  width: 300px;
+}
+
+main
+{
+  width: 900px;
+  margin-top: 10px;
+}
+
+.introduce
+{
+  background-image: url("http://stayathome-syllabus.greenfox.academy/week01/assets/first-website-header.png");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 1300px, 100%;
+	height:400px;
+	width:100%;
+  position: relative;
+}
+
+.name
+{
+  position: absolute;
+  left: 33%;
+  bottom: 40px;
+}
+
+.title
+{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.subtitle
+{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 25px;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+p, li
+{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:20px;
+  line-height: 1.6;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+ul
+{
+  margin-top: 20px;
+}
+
+.quote
+{
+  background: #444444;
+  color: white;
+  position: relative;
+}
+
+.quote p:before
+{
+  content: '“';
+  position: absolute;
+  top: -45px;
+  left: 0;
+  font-size: 140px;
+}
+
+.quote p
+{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+  font-weight: 500;
+  padding-top: 50px;
+}
+
+h2
+{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  margin-top: 100px;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h3
+{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+.description
+{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:20px;
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+.subheader
+{
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  font-style: italic;
+  margin-top: -20px;
+  margin-left: 20px;
+}

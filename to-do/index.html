@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="todoList">
+        <div class="cover-view">
+            <div class="cover-img">
+                <div class="opacity_view"></div>
+                <h3>To-Do List</h3>
+            </div> 
+        </div>
+        <div class="content-view">
+            <form class="add">
+                <input id="add_text" type="text" name="add" placeholder="Add item..." required>
+                <a id="add_button" class="btn">Add</a>
+            </form>
+            <ul class="todos">
+                <li>
+                    <input type="checkbox" id="todo_1" />
+                    <label for="todo_1">
+                        <span class="check"></span>Upload project to GitHub
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="todo_2" />
+                    <label for="todo_2">
+                        <span class="check"></span>Study Flutter
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>

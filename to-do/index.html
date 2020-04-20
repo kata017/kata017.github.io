@@ -19,7 +19,7 @@
         </div>
         <div class="content-view">
             <form class="add">
-                <input id="add_text" type="text" name="add" placeholder="Add item..." required>
+                <input id="add_text" type="text" name="add" placeholder="Add item...">
                 <a id="add_button" class="btn">Add</a>
             </form>
             <ul class="todos">
@@ -28,14 +28,27 @@
                     <label for="todo_1">
                         <span class="check"></span>Upload project to GitHub
                     </label>
+                    <img class="delete_button" src="delete.svg" alt="Delete">
                 </li>
                 <li>
                     <input type="checkbox" id="todo_2" />
                     <label for="todo_2">
                         <span class="check"></span>Study Flutter
                     </label>
+                    <img class="delete_button" src="delete.svg" alt="Delete">
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <div class="popup popup--icon -error js_error-popup">
+        <div class="popup__background"></div>
+        <div class="popup__content">
+          <h3 class="popup__content__title">Hiányzó adat</h3>
+          <p class="popup--message">Nem adtál meg elvégzendő feladatot</p>
+          <p>
+            <button class="button button--error" data-for="js_error-popup">OK</button>
+          </p>
         </div>
     </div>
 

@@ -231,6 +231,317 @@ input[type=checkbox]:checked + label span.check::after
     transform: scale(1);
 }
 
-/*.scrollable-element {
-  scrollbar-color: red yellow;
-}*/
+.delete_button
+{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.popup 
+{
+    visibility: hidden;
+    transition: visibility 0ms linear 0.3s;
+    -webkit-transition: visibility 0ms linear 0.3s;
+}
+
+.popup--visible 
+{
+    visibility: visible;
+    transition: visibility 0ms;
+    -webkit-transition: visibility 0ms;
+}
+
+.popup__background 
+{
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 10000;
+    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+.popup--visible .popup__background 
+{
+    opacity: 1;
+}
+
+.popup__content 
+{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    position: fixed;
+    min-width: 400px;
+    top: 50%;
+    left: 50%;
+    padding: 25px 50px;
+    text-align: center;
+    z-index: 10001;
+    animation: hide-popup 0.3s forwards;
+    -webkit-animation: hide-popup 0.3s forwards;   
+}
+
+.popup--message
+{
+    color: #626262;
+    margin-bottom: 8px;
+}
+
+.popup--visible .popup__content 
+{
+    animation: show-popup 0.3s forwards;
+    -webkit-animation: show-popup 0.3s forwards;
+}
+
+.popup--icon .popup__content 
+{
+    padding-top: 130px;   
+}
+
+.popup--icon .popup__content:before, .popup--icon .popup__content:after 
+{
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.popup--icon .popup__content:before 
+{
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    transform: translateX(-50%) scale(1, 0);
+    -webkit-transform: translateX(-50%) scale(1, 0);    
+}
+
+.popup--icon .popup__content:after 
+{
+    content: '\2713';
+    font-size: 45px;
+    line-height: 90px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+    -webkit-transform: translateX(-50%) scale(0);
+}
+
+.popup--visible.popup--icon .popup__content:before 
+{
+    animation: show-icon-cirlce 0.3s forwards 0.15s;
+    -webkit-animation: show-icon-cirlce 0.3s forwards 0.15s;
+}
+  
+.popup--visible.popup--icon .popup__content:after 
+{
+    animation: show-icon 0.3s forwards 0.3s;
+    -webkit-animation: show-icon 0.3s forwards 0.3s;
+}
+
+.-error.popup--icon .popup__content:before 
+{
+    border-color: #CF000F;
+}
+  
+.-error.popup--icon .popup__content:after 
+{
+    content: '\2717';
+    color: #CF000F;
+}
+  
+.popup__content__title
+{
+    color: #626262;
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.button--error
+{
+    background: #CF000F;
+    border: 1px solid #F578A4;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    padding: 8px 12px;
+}
+
+.button--error:focus 
+{
+    outline: none;
+}
+
+@-webkit-keyframes show-popup 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+        -webkit-transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    45% 
+    {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+        -webkit-transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    80% 
+    {
+        transform: translate(-50%, -50%) scale(0.95);
+        -webkit-transform: translate(-50%, -50%) scale(0.95);     
+    }
+
+    100% 
+    {
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);    
+    }
+}
+
+@keyframes show-popup 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+        -webkit-transform: translate(-50%, -50%) scale(0.7);
+    }
+      
+    45% 
+    {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+        -webkit-transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    80% 
+    {
+        transform: translate(-50%, -50%) scale(0.95);
+        -webkit-transform: translate(-50%, -50%) scale(0.95);
+    }
+      
+    100% 
+    {
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+    }    
+}
+
+@-webkit-keyframes hide-popup 
+{
+    0% 
+    {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% 
+    {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+  
+@keyframes hide-popup 
+{
+    0% 
+    {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+    }
+    
+    100% 
+    {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+ 
+@-webkit-keyframes show-icon 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+        -webkit-transform: translateX(-50%) scale(0);
+    }
+    
+    100% 
+    {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+        -webkit-transform: translateX(-50%) scale(1);
+    }
+}
+  
+@keyframes show-icon 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+        -webkit-transform: translateX(-50%) scale(0);
+    }
+    
+    100% 
+    {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+        -webkit-transform: translateX(-50%) scale(1);
+    }
+}
+  
+@-webkit-keyframes show-icon-cirlce 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translateX(-50%) scale(1, 0);
+        -webkit-transform: translateX(-50%) scale(1, 0);
+    }
+
+    100% 
+    {
+        opacity: 1;
+        transform: translateX(-50%) scale(1, 1);
+        -webkit-transform: translateX(-50%) scale(1, 1);
+    }
+}
+  
+@keyframes show-icon-cirlce 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translateX(-50%) scale(1, 0);
+        -webkit-transform: translateX(-50%) scale(1, 0);
+    }
+
+    100% 
+    {
+        opacity: 1;
+        transform: translateX(-50%) scale(1, 1);
+        -webkit-transform: translateX(-50%) scale(1, 1);
+    }
+}

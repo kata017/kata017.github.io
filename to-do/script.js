@@ -11,11 +11,33 @@ setInterval(function()
 
 $("#add_button").click(function()
 {
-    listLength = listLength + 1;
-
     var todo = $("#add_text").val();
-    var line = `<li><input type="checkbox" id="todo_${listLength}" /><label for="todo_${listLength}"><span class="check"></span>${todo}</label></li>`;
-    
-    $(".todos").append(line);
-    $('#add_text').val(""); 
+
+    if (todo.length > 0)
+    {
+        listLength = listLength + 1;
+        var line = `<li><input type="checkbox" id="todo_${listLength}" /><label for="todo_${listLength}"><span class="check"></span>${todo}</label><img class="delete_button" src="delete.svg" alt="Delete"></li>`;
+
+        $(".todos").append(line);
+        $('#add_text').val("");
+    }
+    else
+    {
+        const popup = document.querySelector('.js_error-popup');
+        popup.classList.toggle('popup--visible');
+    }
+});
+
+$(".button").click(function()
+{
+    const popup = document.querySelector('.js_error-popup');
+    popup.classList.toggle('popup--visible');
+});
+
+$(document).on('click', ".delete_button", function() 
+{
+    var target = event.target;
+    var parent = target.parentElement;
+
+    $(parent).remove();      
 });
